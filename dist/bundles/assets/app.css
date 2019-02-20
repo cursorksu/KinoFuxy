@@ -2313,9 +2313,13 @@ body:not(.front) .mm-page .page-movie .page-top .box-right {
     margin-bottom: 32px;
 }
 .c-tabs .c-preview .c-preview__title{
-    margin-top: 22px;
-    padding-bottom: 15px;
+    display: flex;
+    height: 36px;
+    justify-content: center;
+    align-items: center;
     text-align: center;
+    padding: 0;
+    margin: 0;
 }
 
 @media only screen and (min-width: 1280px){
@@ -2353,10 +2357,8 @@ body:not(.front) .mm-page .page-movie .page-top .box-right {
         -webkit-box-pack: left;;
         -ms-flex-pack: left;;
         justify-content: left;
-    }
-    .c-tabs .quality-filter ul {
         text-align: left;
-        padding-bottom: 11px;
+        /*padding-bottom: 11px;*/
         overflow: scroll;
     }
     .c-tabs .quality-filter ul {;

@@ -665,14 +665,14 @@ var app =
             "// useTransform: false,\n  " +
             "adaptiveHeight: true,\n  " +
             "infinite: true,\n  " +
-            "slidesToScroll: 2,\n  " +
+            "slidesToScroll: 1,\n  " +
             "slidesToShow: 4,\n  " +
             "speed: 300,\n  " +
 
             "responsive: [{\n    " +
             "   breakpoint: 993,\n    " +
             "   settings: {\n      " +
-            "       slidesToScroll: 2,\n      " +
+            "       slidesToScroll: 1,\n      " +
             "       slidesToShow: 3,\n      " +
             "       arrows: false,\n      " +
             "       variableWidth: true\n    " +

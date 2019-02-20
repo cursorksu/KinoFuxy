@@ -1,0 +1,11 @@
+#IDE
+.DS_Store
+.sass-cache
+.idea
+node_modules/
+bower_components/
+npm-debug.log
+extensions_modules
+upload
+assets/sass/shared/bootstrap-4.1.0/
+css/buk/

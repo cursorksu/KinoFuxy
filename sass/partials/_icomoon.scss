@@ -1,0 +1,174 @@
+$icomoon-font-path: "../fonts/icomoon/fonts" !default;
+
+@font-face {
+  font-family: 'icomoon';
+  src:  url('#{$icomoon-font-path}/icomoon.eot');
+  src:  url('#{$icomoon-font-path}/icomoon.eot#iefix') format('embedded-opentype'),
+  url('#{$icomoon-font-path}/icomoon.woff2') format('woff2'),
+  url('#{$icomoon-font-path}/icomoon.ttf') format('truetype'),
+  url('#{$icomoon-font-path}/icomoon.woff') format('woff'),
+  url('#{$icomoon-font-path}/icomoon.svg#icomoon') format('svg');
+  font-weight: normal;
+  font-style: normal;
+}
+
+[class^="icon-"], [class*=" icon-"] {
+  /* use !important to prevent issues with browser extensions that change fonts */
+  font-family: 'icomoon' !important;
+  speak: none;
+  font-style: normal;
+  font-weight: normal;
+  font-variant: normal;
+  text-transform: none;
+  line-height: 1;
+
+  /* Better Font Rendering =========== */
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+.icon-help {
+  &:before {
+    content: $icon-help;
+  }
+}
+.icon-promo-1 {
+  &:before {
+    content: $icon-promo-1;
+  }
+}
+.icon-arrow-link-down {
+  &:before {
+    content: $icon-arrow-link-down;
+  }
+}
+.icon-arrow-link-left {
+  &:before {
+    content: $icon-arrow-link-left;
+  }
+}
+.icon-arrow-link-up {
+  &:before {
+    content: $icon-arrow-link-up;
+  }
+}
+.icon-play {
+  &:before {
+    content: $icon-play;
+  }
+}
+.icon-arrow-down {
+  &:before {
+    content: $icon-arrow-down;
+  }
+}
+.icon-arrow-up {
+  &:before {
+    content: $icon-arrow-up;
+  }
+}
+.icon-vk {
+  &:before {
+    content: $icon-vk;
+  }
+}
+.icon-twitter {
+  &:before {
+    content: $icon-twitter;
+  }
+}
+.icon-telegram {
+  &:before {
+    content: $icon-telegram;
+  }
+}
+.icon-odnoklassniki {
+  &:before {
+    content: $icon-odnoklassniki;
+  }
+}
+.icon-facebook {
+  &:before {
+    content: $icon-facebook;
+  }
+}
+.icon-download {
+  &:before {
+    content: $icon-download;
+  }
+}
+.icon-watch {
+  &:before {
+    content: $icon-watch;
+  }
+}
+.icon-double-top {
+  &:before {
+    content: $icon-double-top;
+  }
+}
+.icon-traler {
+  &:before {
+    content: $icon-traler;
+  }
+}
+.icon-metacritic {
+  &:before {
+    content: $icon-metacritic;
+  }
+}
+.icon-tomatoes {
+  &:before {
+    content: $icon-tomatoes;
+  }
+}
+.icon-Imdb {
+  &:before {
+    content: $icon-Imdb;
+  }
+}
+.icon-kinopoisk {
+  &:before {
+    content: $icon-kinopoisk;
+  }
+}
+.icon-search {
+  &:before {
+    content: $icon-search;
+  }
+}
+.icon-arrow-link-right {
+  &:before {
+    content: $icon-arrow-link-right;
+  }
+}
+.icon-logo {
+  &:before {
+    content: $icon-logo;
+  }
+}
+.icon-arrow-left {
+  &:before {
+    content: $icon-arrow-left;
+  }
+}
+.icon-arrow-right {
+  &:before {
+    content: $icon-arrow-right;
+  }
+}
+.icon-close {
+  &:before {
+    content: $icon-close;
+  }
+}
+.icon-down {
+  &:before {
+    content: $icon-down;
+  }
+}
+.icon-up {
+  &:before {
+    content: $icon-up;
+  }
+}

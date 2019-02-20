@@ -1,0 +1,39 @@
+.c-line
+  font-size: 0
+  margin-bottom: 13px
+  min-height: 16px
+  .c-line__field
+    display: inline-block
+    white-space: nowrap
+    vertical-align: middle
+  .c-line__original
+    position: relative
+    width: 58%
+    overflow: hidden
+    font-size: 14px
+    font-weight: 400
+    color: rgba(#b6cffd, .4)
+    &:after
+      content: ''
+      display: block
+      position: absolute
+      right: 0
+      top: 0
+      bottom: 0
+      height: 14px
+      width: 20%
+      background-image: linear-gradient(to right, rgba(2, 32, 83, 0), #022449 93%)
+  .c-line__link
+    text-align: right
+    width: 42%
+    font-size: 16px
+
++MQ(768px)
+  .c-line
+    padding-top: 15px
+
++MQ(1026px)
+  .c-line
+    padding-top: 0
+    .c-line__original
+      font-size: 16px

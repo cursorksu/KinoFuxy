@@ -1,0 +1,66 @@
+.c-panel
+  .is-clamped
+    + .c-more
+      display: block
+      &.is-open
+        display: none
+  
+.c-more
+  color: rgba($color-sky, .7)
+  &.is-open
+    display: none
+    .c-more__help
+      &:after
+        content: $icon-arrow-u
+  .c-panel &
+    margin-top: 20px
+    text-align: center
+    display: none
+    &.is-open
+      margin-top: 0
+  .c-more__help
+    pointer-events: none
+    display: inline-block
+    padding-right: 15px
+    position: relative
+    &:after
+      content: $icon-arrow-d
+      color: rgba($color-sky, .9)
+      font-size: 10px
+      position: absolute
+      right: 0
+      +center(y)
+      +icomoon
+  .c-more__anchor
+    font-size: 14px
+    font-weight: 400
+    text-transform: uppercase
+    display: inline
+    background-image: linear-gradient(rgba($color-sky, .3), rgba($color-sky, .3))
+    background-size: 1px 1px
+    padding-bottom: 4px
+    background-position: 100% 96%
+    background-repeat: repeat-x
+  &.has-arrow-right
+    .c-more__help
+      &:after
+        content: $icon-arrow-r
+
++MQ(993px)
+  .c-more
+    .c-panel &
+      display: none
+    .c-slider &
+      color: rgba($color-sky, .7)
+
++MQ(1280px)
+  .c-more
+    transition: .3s
+    &:hover
+      transition: 0s
+      color: $color-sky
+      .c-more__help
+        &:after
+          color: $color-sky
+      .c-more__anchor
+        background-image: linear-gradient(rgba($color-sky, 0), rgba($color-sky, 0))

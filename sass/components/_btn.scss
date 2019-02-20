@@ -1,0 +1,208 @@
+.btn {
+  display: inline-block;
+  vertical-align: middle;
+  text-decoration: none;
+  position: relative;
+  cursor: pointer;
+  outline: 0;
+  height: 46px;
+  width: auto;
+  min-width: 176px;
+  padding: 0 20px;
+  color: #fffefe;
+  text-align: center;
+  line-height: 1;
+  outline: none!important;
+  margin: 0;
+  background: transparent;
+  border: 1px solid rgba(#fff,0.5);
+  border-radius: 0;
+  transition: all 0.1s ease 0s;
+  @extend %vertical;
+  .help {
+    color: #fffefe;
+    font-family: $roboto;
+    font-size: 14px;
+    font-weight: 400;
+    line-height: 1.2;
+    padding-top: 0;
+    text-transform: uppercase;
+    position: relative;
+    z-index: 1;
+  }
+  &:hover, &:active, &:focus {
+    color: #fff;
+    border-color: transparent;
+    .help {
+      color: #fff!important;
+    }
+    &:before {
+      width: 100%;
+    }
+  }
+  &:before {
+    content: '';
+    display: block;
+    position: absolute;
+    left: -1px;
+    top: -1px;
+    bottom: -1px;
+    right: -1px;
+    width: 0;
+    opacity: 0.4;
+    @extend .gradient-1;
+    transition: width 0.2s ease-in 0s;
+  }
+
+  &.violet-fill {
+    border: none!important;
+    padding: 1px;
+    height: auto;
+    overflow: hidden;
+    .help {
+      color: rgba(#be38eb,0.85);
+      z-index: 4;
+      transition: all 0.1s ease 0s;
+    }
+    &:before {
+      width: auto;
+      left: 0;
+      top: 0;
+      bottom: 0;
+      right: 0;
+      will-change: transform;
+    }
+    &:after {
+      display: none;
+    }
+    .box {
+      display: block;
+      width: 100%;
+      height: 44px;
+      position: relative;
+      z-index: 2;
+      background: #022449;
+      padding: 0 20px;
+      @extend %vertical;
+    }
+    &:hover, &:active, &:focus {
+      color: rgba(#fff,0.8);
+      .help {
+        color: rgba(#fff,0.8)!important;
+      }
+      &:before {
+        width: auto;
+      }
+      .box {
+        background: transparent;
+      }
+    }
+  }
+
+  &.gradient {
+    border-color: transparent;
+    &:hover, &:active, &:focus {
+      color: #fff;
+      border-color: transparent;
+      .help {
+        color: #fff!important;
+      }
+      &:before {
+        width: initial;
+        opacity: 0.8;
+      }
+    }
+    .help {
+      color: rgba(#fff,0.8);
+    }
+    &:before {
+      width: initial;
+      opacity: 0.6;
+    }
+  }
+
+  &.btn-solid {
+    background: $blue;
+    &:hover, &:active, &:focus {
+      background: transparent;
+      .help {
+        color: $blue!important;
+      }
+    }
+    .help {
+      color: #fff;
+    }
+  }
+
+  &.text-upper {
+    .help {
+      text-transform: uppercase;
+    }
+  }
+  &.icon-left {
+    .help {
+      position: relative;
+      [class*=" icon-"], [class^=icon-] {
+        &.icon-traler,
+        &.icon-watch,
+        &.icon-download {
+          font-size: 36px;
+          vertical-align: middle;
+          margin: 0 8px 0 0;
+          position: relative;
+          top: -1px;
+        }
+      }
+    }
+  }
+  &.icon-right {
+    .help {
+      position: relative;
+      padding: 0 18px 0 0;
+      [class*=" icon-"], [class^=icon-] {
+        display: block;
+        position: absolute;
+        @include center(y);
+        right: 0;
+      }
+    }
+  }
+  &.large {
+    height: 40px;
+  }
+  &.small-x {
+    height: 42px;
+  }
+  &.disable {
+    color: grey;
+    border-color: grey;
+    background: #fff;
+    &:hover, &:active, &:focus {
+      color: grey;
+      border-color: grey;
+      background: #fff;
+      .help {
+        color: grey!important;
+      }
+    }
+    &:visited {
+      .help {
+        color: grey!important;
+      }
+    }
+    .help {
+      color: grey;
+    }
+  }
+
+  .icon-bold-down {
+    font-size: 8px;
+  }
+}
+
+button {
+  &.btn {
+    padding-top: 0;
+    padding-bottom: 0;
+  }
+}

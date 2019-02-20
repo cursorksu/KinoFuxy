@@ -1,0 +1,39 @@
+.c-badge
+  $mobile-size: 21.5px
+  display: inline-block
+  background-color: #48597D
+  background-image: linear-gradient(to top, #273759 -75%, #48597D 70%)
+  text-align: center
+  display: table
+  height: $mobile-size
+  min-width: $mobile-size * 2
+  border-bottom-left-radius: $mobile-size * 2;
+  border-bottom-right-radius: $mobile-size * 2;
+  .c-badge__anchor
+    display: flex
+    align-items: center
+    justify-content: center
+    font-family: 'Fira Sans', sans-serif
+    font-weight: 500
+    font-size: 14px
+    color: $color-text-white-opacity
+    padding-bottom: 6px
+    line-height: 1
+
++MQ(1025px)
+  .c-badge
+    $size-desktop: 40px
+    .c-preview--large &,
+    .c-preview--biggest &
+      height: $size-desktop
+      min-width: $size-desktop * 2
+      .c-badge__anchor
+        font-size: 24px
+        margin-top: -2px
+    $size-medium: 30px
+    .c-preview--medium &
+      height: $size-medium
+      min-width: $size-medium * 2
+      .c-badge__anchor
+        font-size: 17px
+        

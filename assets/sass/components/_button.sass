@@ -1,0 +1,129 @@
+.button
+  display: block
+  height: 46px
+  margin: auto
+  color: #cd5ff1
+  min-width: 78px
+  font-size: 14px
+  font-weight: 400
+  font-family: 'Roboto'
+  padding: 1px
+  text-transform: uppercase
+  letter-spacing: 0.07px
+  +gradient(.4)
+  cursor: pointer
+  width: 100%
+  &:focus
+    outline: none
+  &:visited
+    color: #cd5ff1
+  &:hover
+    color: #cd5ff1
+  &.is-active
+    color: #fff
+    pointer-events: none
+    cursor: auto
+    .button__help 
+      background: transparent
+  .is-active &
+    color: #fff
+    pointer-events: none
+    .button__help 
+      background: transparent
+  .button__help 
+    padding-right: 20px
+    padding-left: 20px
+    background-color: $color-bg
+    align-items: center
+    display: flex
+    justify-content: center
+    height: 100%
+    max-height: 100%
+    transition: background .3s ease
+    width: 100%
+    pointer-events: none
+  &--rounded
+    border-radius: 23px
+  &--full-width
+    width: 100%
+  &--inverted
+    font-weight: 600
+    overflow: hidden
+    color: #fff
+    position: relative
+    background-color: transparent
+    z-index: 2
+    +gradient(.65)
+    background: unset
+    display: flex
+    align-content: center
+    justify-content: center
+    &:after
+      content: ''
+      position: absolute
+      top: 0
+      right: 0
+      bottom: 0
+      left: 0
+      border-radius: inherit
+      +gradient(.65)
+      transition: .3s
+      z-index: 2
+    .button__help
+      padding-left: 20px
+      padding-right: 20px
+      border-radius: inherit
+      z-index: 3
+      position: relative
+      background-color: unset
+      height: inherit
+  &--shadow
+    box-shadow: 0 8px 19px rgba(0, 0, 0, 0.2)
+  &--low
+    height: 46px
+  &--darken
+    .button__help
+      +gradient(.2)
+
++MQ(480px)
+  .button  
+    width: initial
+    .button__help
+      padding-left: 25px
+      padding-right: 25px
+    &--full-width
+      width: 100%
+
++MQ(1280px)
+  .button   
+    &:hover
+      color: #fff
+      .button__help 
+        transition: .0s
+        background-color: transparent
+    &--long
+      min-width: 357px
+    &--inverted
+      .button__help 
+        transition: .3s
+      &:hover
+        color: #d452eb
+        &:after
+          transform: translateX(100%)
+        .button__help 
+          +gradient(.8)
+          z-index: 0
+          &:before
+            content: ''
+            position: absolute
+            top: 2px
+            left: 2px
+            right: 2px
+            bottom: 2px
+            border-radius: inherit
+            z-index: -1
+            background-color: $color-bg
+    &--darken
+      &:hover
+        .button__help 
+          +gradient(.4)

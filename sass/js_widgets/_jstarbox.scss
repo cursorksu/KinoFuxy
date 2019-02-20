@@ -1,0 +1,100 @@
+.positioner {
+	position: relative;
+	display: inline-block;
+	line-height: 0;
+}
+
+.starbox .colorbar,
+.starbox .ghost {
+	z-index: 0;
+	position: absolute;
+	max-width: 100%;
+	top: 0;
+	bottom: 0;
+	left: 0;
+}
+
+.starbox .stars {
+	display: inline-block;
+}
+
+.starbox .stars .star_holder {
+	position: relative;
+	z-index: 1;
+	//margin: 0 -2px;
+}
+
+.starbox .stars .star_holder .star {
+	display: inline-block;
+	vertical-align: baseline;
+	background-repeat: no-repeat;
+}
+
+
+
+.starbox .stars .star_holder .star {
+	background-image: url("../images/star-inverse.svg");
+	background-position: center;
+	background-size: 24px;
+	width: 25px;
+	height: 25px;
+	border-top: 1px solid #022449;
+	border-bottom: 1px solid #022449;
+	border-left: 2px solid #022449;
+	border-right: 2px solid #022449;
+}
+
+/* Override with your own colours… */
+.starbox .stars { background: #536681; }
+.starbox.unchangeable .stars { background: #536681; }
+.starbox .rated .stars { background: #536681; }
+.starbox .rated.hover .stars { background: #536681; }
+.starbox .colorbar { background: #8f32ab; }
+.starbox .hover .colorbar { background: #8f32ab; }
+.starbox .rated .colorbar { background: #8f32ab; }
+.starbox .rated.hover .colorbar { background: #8f32ab; }
+.starbox .ghost { background: #6582ac; }
+
+
+//.serial-rating {
+//	font-size: 0;
+//	width: 235px;
+//	> span {
+//		display: inline-block;
+//		vertical-align: top;
+//		color: rgba(#fefefe, 0.3);
+//		font-size: 14px;
+//		font-weight: 400;
+//		line-height: 20px;
+//		padding-right: 4px;
+//	}
+//	.serial-item-rating {
+//		display: inline-block;
+//		vertical-align: top;
+//		width: 180px;
+//	}
+//}
+
+
+.starbox {
+	&.large-stars {
+		.stars .star_holder .star {
+			background-size: 40px;
+			width: 48px;
+			height: 42px;
+			border-top: 2px solid #fff;
+			border-bottom: 2px solid #fff;
+			border-left: 4px solid #fff;
+			border-right: 4px solid #fff;
+			@media #{$small-only} {
+				background-size: 24px;
+				width: 25px;
+				height: 25px;
+				border-top: 2px solid #fff;
+				border-bottom: 2px solid #fff;
+				border-left: 2px solid #fff;
+				border-right: 2px solid #fff;
+			}
+		}
+	}
+}

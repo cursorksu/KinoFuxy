@@ -1,0 +1,28 @@
+=line($color-edge, $color, $where, $opacity)
+  position: relative
+  @if ($where == 'after')
+    &:after
+      content: ''
+      position: absolute
+      left: 0
+      right: 0
+      bottom: 0
+      height: 1px
+      width: 100%
+      // max-width: 1260px
+      margin-left: auto
+      margin-right: auto 
+      background: linear-gradient(to right, $color-edge 0%, rgba($color, $opacity) 32%, rgba($color, $opacity) 68%, $color-edge 100%)
+  @else
+    &:before
+      content: ''
+      position: absolute
+      left: 0
+      right: 0
+      bottom: 0
+      height: 1px
+      width: 100%
+      // max-width: 1260px
+      margin-left: auto
+      margin-right: auto 
+      background: linear-gradient(to right, $color-edge 0%, rgba($color, $opacity) 32%, rgba($color, $opacity) 68%, $color-edge 100%)

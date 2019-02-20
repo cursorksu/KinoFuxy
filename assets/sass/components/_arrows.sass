@@ -1,0 +1,66 @@
+.c-arrow
+  display: inline-block
+  opacity: .7
+  .c-arrow__box
+    display: block
+    box-shadow: 0 0 41px rgba(0, 182, 255, 0.24)
+    position: relative
+    border-radius: 50%
+    background-color: #09244a
+    transition: background-color .3s
+    display: table
+    +square(29px)
+    &:after
+      content: ''
+      position: absolute
+      display: block
+      left: -1px
+      top: -1px
+      right: -1px
+      bottom: -1px
+      z-index: -1
+      border-radius: 50%
+      +gradient(1)
+  [class^='icon']
+    font-size: 9px
+    font-weight: bold
+    color: rgba(#b007d6, .7)
+    display: table-cell
+    vertical-align: middle
+    z-index: 10
+  &.c-slider__prev
+    [class^='icon']
+      transform: translateX(-1px)
+  &.c-slider__next
+    [class^='icon']
+      transform: translateX(1px)
+  &.slick-disabled
+    opacity: 0
+    
++MQ(993px)
+  .c-arrow
+    .c-arrow__box
+      +square(80px)
+    [class^='icon']
+      font-size: 21px
+    &.c-slider__prev
+      [class^='icon']
+        transform: translateX(-3px)
+    &.c-slider__next
+      [class^='icon']
+        transform: translateX(3px)
+
++MQ(1280px)
+  .c-arrow
+    .c-arrow__box
+      box-shadow: 0 0 29px rgba(235, 2, 185, 0.31)
+    &:hover
+      &:not(.slick-disabled)
+        .c-arrow__box
+          transition: background-color 0s
+          background-color: rgba(9,22,62,0);
+        [class^='icon']
+          color: #ffffff
+    &.slick-disabled
+      &:hover
+        cursor: auto

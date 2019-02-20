@@ -1,0 +1,203 @@
+.block-promo {
+  display: block;
+  position: relative;
+  background: #021c37;
+  width: 100%;
+  height: 396px;
+  box-shadow: 0 0 35px rgba(142, 158, 232, 0.24);
+  padding: 0 10px;
+  will-change: transform;
+  transition: all 0.1s ease 0s;
+  @extend %vertical;
+  @media only screen and (max-width: 1300px) {
+    height: 446px;
+  }
+  @media only screen and (max-width: 1200px) {
+    height: 421px;
+  }
+  @media only screen and (max-width: 1100px) {
+    height: 386px;
+  }
+  &:hover {
+    box-shadow: 0 0 35px rgba(#d452eb, 0.34);
+    .vertical {
+      .icon {
+        > span {
+          background: rgba(151,194,255,1);
+          background: -moz-linear-gradient(-45deg, rgba(151,194,255,1) 0%, rgba(253,94,216,1) 50%, rgba(151,194,255,1) 100%);
+          background: -webkit-gradient(left top, right bottom, color-stop(0%, rgba(151,194,255,1)), color-stop(50%, rgba(253,94,216,1)), color-stop(100%, rgba(151,194,255,1)));
+          background: -webkit-linear-gradient(-45deg, rgba(151,194,255,1) 0%, rgba(253,94,216,1) 50%, rgba(151,194,255,1) 100%);
+          background: -o-linear-gradient(-45deg, rgba(151,194,255,1) 0%, rgba(253,94,216,1) 50%, rgba(151,194,255,1) 100%);
+          background: -ms-linear-gradient(-45deg, rgba(151,194,255,1) 0%, rgba(253,94,216,1) 50%, rgba(151,194,255,1) 100%);
+          background: linear-gradient(135deg, rgba(151,194,255,1) 0%, rgba(253,94,216,1) 50%, rgba(151,194,255,1) 100%);
+          filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#97c2ff', endColorstr='#97c2ff', GradientType=1 );
+          -webkit-background-clip: text;
+          -webkit-text-fill-color: transparent;
+        }
+      }
+      .gradient {
+        .help {
+          color: #d452eb!important;
+        }
+        &:before {
+          width: 0;
+        }
+        > .border {
+          opacity: 0.4;
+          &:after {
+            width: 0;
+          }
+        }
+      }
+    }
+  }
+  &:before {
+    content: '';
+    display: block;
+    position: absolute;
+    right: 0;
+    top: 0;
+    background: url('../images/promo-corner.png') no-repeat top right transparent;
+    background-size: cover;
+    width: 81px;
+    height: 100px;
+    pointer-events: none;
+  }
+  .vertical {
+    display: inline-block;
+    vertical-align: middle;
+    width: 100%;
+    .icon {
+      display: block;
+      width: 100%;
+      margin-bottom: 34px;
+      > span {
+        font-size: 120px;
+        opacity: 0.9;
+        transition: all 0.1s ease 0s;
+        background: rgba(151,194,255,1);
+        background: -moz-linear-gradient(-45deg, rgba(151,194,255,1) 0%, rgba(219,164,255,1) 50%, rgba(151,194,255,1) 100%);
+        background: -webkit-gradient(left top, right bottom, color-stop(0%, rgba(151,194,255,1)), color-stop(50%, rgba(219,164,255,1)), color-stop(100%, rgba(151,194,255,1)));
+        background: -webkit-linear-gradient(-45deg, rgba(151,194,255,1) 0%, rgba(219,164,255,1) 50%, rgba(151,194,255,1) 100%);
+        background: -o-linear-gradient(-45deg, rgba(151,194,255,1) 0%, rgba(219,164,255,1) 50%, rgba(151,194,255,1) 100%);
+        background: -ms-linear-gradient(-45deg, rgba(151,194,255,1) 0%, rgba(219,164,255,1) 50%, rgba(151,194,255,1) 100%);
+        background: linear-gradient(135deg, rgba(151,194,255,1) 0%, rgba(219,164,255,1) 50%, rgba(151,194,255,1) 100%);
+        filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#97c2ff', endColorstr='#97c2ff', GradientType=1 );
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+        will-change: transform;
+      }
+    }
+    .field-label {
+      width: 100%;
+      display: block;
+      margin-bottom: 10px;
+      > span {
+        display: inline-block;
+        vertical-align: top;
+        color: rgba(#93a4ef,0.8);
+        font-size: 14px;
+        font-weight: 300;
+        line-height: 1;
+        padding: 3px 7px 3px;
+        border: 1px solid rgba(#93a4ef,0.5);
+      }
+    }
+    .field-title {
+      display: block;
+      color: rgba(#9daefd,0.95);
+      font-size: 32px;
+      font-weight: 400;
+      line-height: 1.2;
+      margin-bottom: 30px;
+      @media only screen and (max-width: 1300px) {
+        font-size: 28px;
+      }
+    }
+    .field-btn {
+      display: block;
+      width: 100%;
+    }
+    .gradient {
+      display: inline-block;
+      position: relative;
+      width: 190px;
+      height: 38px;
+      overflow: hidden;
+      border-radius: 19px;
+      border-color: transparent;
+      opacity: 1;
+      transition: all 0.1s ease 0s;
+      @extend %vertical;
+      &:hover, &:active, &:focus {
+        //color: #a900fe;
+        //color: rgba(#9daefd,0.95);
+        color: #d452eb;
+        .help {
+          //color: rgba(#9daefd,0.95)!important;
+          color: #d452eb!important;
+        }
+        &:before {
+          width: 0;
+        }
+        > .border {
+          &:after {
+            width: 0;
+          }
+        }
+      }
+      .help {
+        color: rgba(#fff,0.8);
+        font-family: $roboto;
+        font-size: 14px;
+        font-weight: 400;
+        line-height: 1.2;
+        padding-top: 3px;
+        text-transform: uppercase;
+        position: relative;
+        z-index: 3;
+      }
+
+      > .border {
+        display: block;
+        position: absolute;
+        left: 0;
+        top: 0;
+        bottom:0;
+        right: 0;
+        width: 100%;
+        border-radius: 19px;
+        overflow: hidden;
+        z-index: 1;
+        opacity: 0.4;
+        @extend .gradient-1;
+        transition: all 0.1s ease 0s;
+        &:before {
+          content: '';
+          display: block;
+          position: absolute;
+          left: 2px;
+          right: 2px;
+          top: 2px;
+          bottom: 2px;
+          background: #021c37;
+          border-radius: 18px;
+          will-change: transform;
+        }
+        &:after {
+          content: '';
+          position: absolute;
+          right: 0;
+          top: 0;
+          bottom: 0;
+          width: 100%;
+          opacity: 1;
+          z-index: 2;
+          will-change: transform;
+          @extend .gradient-1;
+          transition: width 0.32s ease 0s;
+        }
+      }
+    }
+  }
+}

@@ -1,0 +1,107 @@
+.c-counter
+  position: fixed
+  bottom: 10px
+  left: 0
+  z-index: 50
+  opacity: 0
+  transition: opacity .3s
+  border-top-right-radius: 21px
+  border-bottom-right-radius: 21px
+  // background: #09163e
+  // opacity: .9
+  &:before
+    content: ''
+    position: absolute
+    // height: 100%
+    // width: 100%
+    right: -1px
+    top: -1px
+    bottom: -1px
+    left: 0
+    background-image: linear-gradient(to bottom, rgba(#9305e1, .85), rgba(#d805b0, .85))
+    border-top-right-radius: 21px
+    border-bottom-right-radius: 21px
+    z-index: -1
+  &.is-active
+    opacity: 1
+  &.is-reverse
+    .c-counter__svg
+      transform-origin: 50% 50% 
+      transition: .4s
+      transform: rotateX(180deg)
+  .c-counter__inner
+    padding-left: 5px
+    padding-right: 10px
+    padding-top: 9px
+    padding-bottom: 8px
+    background-color: rgba(#09163e, .85)
+    // border-top: 1px solid rgba(#9305e1, .85)
+    // border-bottom: 1px solid rgba(#d805b0, .85)
+    // border-right: 1px solid rgba(#d805b0, .85)
+    border-top-right-radius: inherit
+    border-bottom-right-radius: inherit
+    position: relative
+    z-index: 5
+
+  .c-counter__row
+    font-size: 0
+  .c-counter__col
+    display: inline-block
+    vertical-align: middle
+    + .c-counter__col
+      padding-left: 8px
+  .c-counter__img
+  .c-counter__digits
+    font-family: 'Roboto'
+    font-size: 24px
+    line-height: 1
+    font-weight: 300
+    color: $color-magenta
+  .c-counter__svg
+    transition: .4s
+    width: 21px
+    .icon-double-top
+      color: #a900fe
+      font-size: 16px
+    // svg
+    //   width: 100%
+    // polygon
+    //   fill: #a900fe
+    + .c-counter__svg
+      margin-top: -3px
+  .c-counter__length
+    display: inline-block
+  .c-counter__current
+    display: inline-block
+    color: #f900c5
+  .c-counter__sep
+    display: inline-block
+    color: #f900c5
+
++MQ(1280px)
+  .c-counter
+    left: 5vw
+    background-color: unset
+    bottom: initial
+    top: 50%
+    &:before
+      background-image: unset
+    .c-counter__col
+      + .c-counter__col
+        padding-left: 15px
+    .c-counter__inner
+      border-top: none
+      border-bottom: none
+      border-right: none
+      background-color: unset
+      &:after
+        content: none
+
++MQ(1440px)
+  .c-counter
+    left: 10vw
+    bottom: 20vh
+
++MQ(1920px)
+  .c-counter
+    left: 20vw

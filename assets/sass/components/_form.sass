@@ -1,0 +1,90 @@
+.c-form
+  .c-form__inner
+    max-width: 520px
+    margin: 0 auto
+    padding-bottom: 30px
+  .c-form__group
+    + .c-form__group
+      margin-top: 17px
+      &--action
+        margin-top: 13px
+  .c-form__action
+    padding-top: 17px
+  .c-form__hint
+    visibility: hidden
+    padding-left: 22px
+    margin: 6px 0 0
+    font-size: 12px
+    text-align: left
+    display: block
+  .c-form__controls
+    position: relative
+    &.has-error,
+    &.error
+      .c-form__hint
+        visibility: visible
+        color: orange
+      input[type="text"],
+      input[type="tel"],
+      input[type="email"],
+      input[type="password"],
+      input[type="search"],
+      input[type="date"],
+      textarea
+        border-color: orange
+        &:focus
+          border-color: rgba(#000, .5)
+          + .c-form__hint
+            color: rgba(#000, .5)
+  input[type="text"],
+  input[type="tel"],
+  input[type="email"],
+  input[type="password"],
+  input[type="search"],
+  input[type="date"],
+  textarea
+    background: #fff
+    outline: 0
+    color: #000
+    font-size: 14px
+    font-weight: normal
+    text-align: left
+    width: 100%
+    border: 1px solid #b6cffd
+    transition: all .1s linear 0s
+    border-radius: 0
+    &::placeholder
+      color: rgba(#929393, .8)
+    &:focus
+      color: #000
+      text-transform: none
+      border-color: rgba(#5a0585, .5)
+      &::placeholder
+        color: transparent
+  input[type="text"],
+  input[type="tel"],
+  input[type="email"],
+  input[type="search"],
+  input[type="password"]
+    height: 53px
+    padding: 18px 15px
+  input[type="search"]
+    -webkit-appearance: none
+  input[type="password"]
+    text-transform: none!important
+  textarea
+    resize: none
+    padding: 18px 15px
+    height: 160px
+  .errorMessage
+    @extend .c-form__hint
+
++MQ(1280px) 
+  .c-form
+    .c-form__group
+      + .c-form__group
+        margin-top: 25px
+        &--action
+          margin-top: 21px
+    textarea
+      height: 170px

@@ -1,0 +1,315 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport"
+        content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Document</title>
+</head>
+<body>
+
+<div class="block-about-movie">
+  <h2 class="title">О фильме</h2>
+  <div class="about-wrapper clearfix">
+    <div class="box-left">
+      <div class="movie-posters-slider" id="posterGallery">{cover}</div>
+      <div class="movie-assessment">
+        <div class="label">Рейтинг зрителей:</div>
+        <ul class="assessment-list">
+          <li>
+            <noindex><div class="field-assessment kinopoisk"><a href="//kinopoisk.ru/film/{kpid}/" rel="nofollow" target="_blank"><span class="icon-kinopoisk"></span></a>{ratekp}</div></noindex>
+          </li>
+          <li>
+            <noindex><div class="field-assessment imdb"><a href="#" rel="nofollow"><span class="icon-Imdb"></span></a>{rateimdb}</div></noindex>
+          </li>
+        </ul>
+      </div>
+    </div>
+    <div class="box-right">
+      <div class="movie-assessment">
+        <ul class="assessment-list">
+          <li>
+            <noindex><div class="field-assessment kinopoisk"><a href="//kinopoisk.ru/film/{kpid}/" rel="nofollow" target="_blank"><span class="icon-kinopoisk"></span></a>{ratekp}</div></noindex>
+          </li>
+          <li>
+            <noindex><div class="field-assessment imdb"><a href="#" rel="nofollow"><span class="icon-Imdb"></span></a>{rateimdb}</div></noindex>
+          </li>
+        </ul>
+      </div>
+      <div class="movie-info-fields">
+        <div class="field-item">
+          <div class="label">Год:</div>
+          <div class="content">
+            <div class="links">
+              <a href="/year-{year}/"><span>{year}</span></a>
+            </div>
+          </div>
+        </div>
+        <div class="field-item">
+          <div class="label">Жанр:</div>
+          <div class="content">
+            <div class="links" itemprop="genre">{genre}</div>
+          </div>
+        </div>
+        [xfgiven_country]
+        <div class="field-item">
+          <div class="label">Страна:</div>
+          <div class="content">
+            <div class="links" itemprop="countryOfOrigin">{country}</div>
+          </div>
+        </div>
+        [/xfgiven_country]
+        [xfgiven_slogan]
+        <div class="field-item">
+          <div class="label">Слоган:</div>
+          <div class="content">
+            <div class="text">{slogan}</div>
+          </div>
+        </div>
+        [/xfgiven_slogan]
+        [xfgiven_director]
+        <div class="field-item">
+          <div class="label">Режиссер:</div>
+          <div class="content">
+            <div class="text" itemprop="director">{director}</div>
+          </div>
+        </div>
+        [/xfgiven_director]
+        [xfgiven_scenario]
+        <div class="field-item">
+          <div class="label">Сценарий:</div>
+          <div class="content">
+            <div class="text" itemprop="creator">{scenario}</div>
+          </div>
+        </div>
+        [/xfgiven_scenario]
+        [xfgiven_producer]
+        <div class="field-item">
+          <div class="label">Продюсер:</div>
+          <div class="content">
+            <div class="text" itemprop="producer">{producer}</div>
+          </div>
+        </div>
+        [/xfgiven_producer]
+        [xfgiven_operator]
+        <div class="field-item">
+          <div class="label">Оператор:</div>
+          <div class="content">
+            <div class="text">{operator}</div>
+          </div>
+        </div>
+        [/xfgiven_operator]
+        [xfgiven_compositor]
+        <div class="field-item">
+          <div class="label">Композитор:</div>
+          <div class="content">
+            <div class="text" itemprop="musicBy">{compositor}</div>
+          </div>
+        </div>
+        [/xfgiven_compositor]
+        [xfgiven_painter]
+        <div class="field-item">
+          <div class="label">Художник:</div>
+          <div class="content">
+            <div class="text">{painter}</div>
+          </div>
+        </div>
+        [/xfgiven_painter]
+        [xfgiven_mounting]
+        <div class="field-item">
+          <div class="label">Монтаж:</div>
+          <div class="content">
+            <div class="text" itemprop="editor">{mounting}</div>
+          </div>
+        </div>
+        [/xfgiven_mounting]
+        [xfgiven_premiereworld]
+        <div class="field-item">
+          <div class="label">Премьера (мир):</div>
+          <div class="content">
+            <meta itemprop="dateCreated" content="{premiereworld_microdata}" />
+            <div class="text">{premiereworld}</div>
+          </div>
+        </div>
+        [/xfgiven_premiereworld]
+        [xfgiven_premiererussia]
+        <div class="field-item">
+          <div class="label">Премьера (РФ):</div>
+          <div class="content">
+            <div class="text">{premiererussia}</div>
+          </div>
+        </div>
+        [/xfgiven_premiererussia]
+        [xfgiven_age]
+        <div class="field-item">
+          <div class="label">Возраст:</div>
+          <div class="content">
+            <div class="text" itemprop="contentRating">{age}</div>
+          </div>
+        </div>
+        [/xfgiven_age]
+        [xfgiven_duration]
+        <div class="field-item">
+          <div class="label">Время:</div>
+          <div class="content">
+            <meta itemprop="duration" content="{time}" />
+            <div class="text">{minutes} мин. / {time}</div>
+          </div>
+        </div>
+        [/xfgiven_duration]
+      </div>
+      <!--Вывод на мобиле-->
+      <div class="movie-info-fields mobile">
+        <div class="field-item">
+          <div class="label">Год:</div>
+          <div class="content">
+            <div class="links">
+              <a href="/year-{year}/"><span>{year}</span></a>
+            </div>
+          </div>
+        </div>
+        <div class="field-item">
+          <div class="label">Жанр:</div>
+          <div class="content">
+            <div class="links">{genre}</div>
+          </div>
+        </div>
+      </div>
+      <div class="field-collapse-info-btn show-for-small-only">
+        <a class="collapse-movie-info-btn" data-shown-text="Все характеристики" data-hide-text="Свернуть" role="button" data-toggle="collapse" href="#collapseMobileInfo" aria-expanded="false" aria-controls="collapseMobileInfo">Все характеристики</a>
+      </div>
+      <!--Конец вывода на мобиле-->
+    </div>
+  </div>
+  <!--Вывод на мобиле-->
+  <div class="movie-description collapse" id="collapseMobileInfo">
+    <div class="well">
+      <div class="movie-info-fields mobile other-fields">
+        [xfgiven_country]
+        <div class="field-item">
+          <div class="label">Страна:</div>
+          <div class="content">
+            <div class="links">{country}</div>
+          </div>
+        </div>
+        [/xfgiven_country]
+        [xfgiven_slogan]
+        <div class="field-item">
+          <div class="label">Слоган:</div>
+          <div class="content">
+            <div class="text">{slogan}</div>
+          </div>
+        </div>
+        [/xfgiven_slogan]
+        [xfgiven_director]
+        <div class="field-item">
+          <div class="label">Режиссер:</div>
+          <div class="content">
+            <div class="text">{director}</div>
+          </div>
+        </div>
+        [/xfgiven_director]
+        [xfgiven_scenario]
+        <div class="field-item">
+          <div class="label">Сценарий:</div>
+          <div class="content">
+            <div class="text">{scenario}</div>
+          </div>
+        </div>
+        [/xfgiven_scenario]
+        [xfgiven_producer]
+        <div class="field-item">
+          <div class="label">Продюсер:</div>
+          <div class="content">
+            <div class="text">{producer}</div>
+          </div>
+        </div>
+        [/xfgiven_producer]
+        [xfgiven_operator]
+        <div class="field-item">
+          <div class="label">Оператор:</div>
+          <div class="content">
+            <div class="text">{operator}</div>
+          </div>
+        </div>
+        [/xfgiven_operator]
+        [xfgiven_compositor]
+        <div class="field-item">
+          <div class="label">Композитор:</div>
+          <div class="content">
+            <div class="text">{compositor}</div>
+          </div>
+        </div>
+        [/xfgiven_compositor]
+        [xfgiven_painter]
+        <div class="field-item">
+          <div class="label">Художник:</div>
+          <div class="content">
+            <div class="text">{painter}</div>
+          </div>
+        </div>
+        [/xfgiven_painter]
+        [xfgiven_mounting]
+        <div class="field-item">
+          <div class="label">Монтаж:</div>
+          <div class="content">
+            <div class="text">{mounting}</div>
+          </div>
+        </div>
+        [/xfgiven_mounting]
+        [xfgiven_premiereworld]
+        <div class="field-item">
+          <div class="label">Премьера (мир):</div>
+          <div class="content">
+            <div class="text">{premiereworld}</div>
+          </div>
+        </div>
+        [/xfgiven_premiereworld]
+        [xfgiven_premiererussia]
+        <div class="field-item">
+          <div class="label">Премьера (РФ):</div>
+          <div class="content">
+            <div class="text">{premiererussia}</div>
+          </div>
+        </div>
+        [/xfgiven_premiererussia]
+        [xfgiven_age]
+        <div class="field-item">
+          <div class="label">Возраст:</div>
+          <div class="content">
+            <div class="text">{age}</div>
+          </div>
+        </div>
+        [/xfgiven_age]
+        [xfgiven_duration]
+        <div class="field-item">
+          <div class="label">Время:</div>
+          <div class="content">
+            <div class="text">{minutes} мин. / {time}</div>
+          </div>
+        </div>
+        [/xfgiven_duration]
+      </div>
+    </div>
+  </div>
+  <!--Конец вывода на мобиле-->
+  <div class="field-movie-description">
+    <h2 class="field-label">Про что фильм «{title}»</h2>
+    <div class="movie-description collapse" id="collapseMovieDescription" style="min-height: 156px;">
+      <div class="well">
+        <p itemprop="description">{full-story}</p>
+      </div>
+    </div>
+    [show-more]
+    <div class="box-btn">
+      <a class="collapse-movie-description-btn" data-shown-text="Читать дальше" data-hide-text="Свернуть описание" role="button" data-toggle="collapse" href="#collapseMovieDescription" aria-expanded="false" aria-controls="collapseMovieDescription">Читать дальше</a>
+    </div>
+    [/show-more]
+    {include file="/engine/modules/dev.movieTorrent.php?newsId={id}"}
+  </div>
+</div>
+<div class="block-movie-gallery" data-id="{newsid}"></div>
+
+</body>
+</html>

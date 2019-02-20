@@ -1,0 +1,27 @@
+.c-link
+  color: rgba(#9baaf9, .9)
+  font-size: inherit
+  &:hover
+    color: rgba(#9baaf9, .9)
+  .c-link__anchor
+    color: inherit
+    display: inline
+    background-size: 1px 1px
+    background-position: 100% 100%
+    background-image: linear-gradient(rgba(#91a0ec, .5), rgba(#91a0ec, .5))
+    background-repeat: repeat-x
+  &--sky
+    color: rgba($color-sky, .9)
+    &:hover
+      color: rgba($color-sky, .9)
+    .c-link__anchor
+      background-image: linear-gradient(rgba($color-sky, .4), rgba($color-sky, .4))
+
+  &--light
+    font-weight: 300
+
++MQ(1280px)
+  .c-link
+    &:hover
+      .c-link__anchor
+        background-size: 0 0

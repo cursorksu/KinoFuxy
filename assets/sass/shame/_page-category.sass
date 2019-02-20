@@ -1,0 +1,29 @@
+.page-category
+  &.socials-bottom
+    .page-header .box-top .box-social
+      top: initial
+      bottom: 6px
+  &.fixed-nav
+    padding-top: 100px
+  .page-header
+    padding: 0
+    &.divided
+      padding-bottom: 23px
+      +line(#321d60, #680fb0, after, .7)
+
++MQ(1280px)
+  .page-category
+    &.fixed-nav
+      padding-top: initial
+
++MQ(1280px)
+  .page-header 
+    &.padding-small
+      padding-bottom: 29px
+
++MQ(800px)
+  header
+    &.scrolled 
+      transform: translate(0)
+      .l-header
+        height: 69px

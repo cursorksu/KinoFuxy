@@ -1,0 +1,111 @@
+.c-slider
+  .c-slider__row
+    margin-bottom: 20px
+  .c-slider__title
+    text-align: center
+    &:first-letter
+      text-transform: uppercase
+  .c-slider__btn
+    margin-top: 10px
+    width: 100%
+  .icon-arrow-right
+    font-weight: bold
+    font-size: 11px
+    margin-left: 7px
+  .c-slider__next,
+  .c-slider__prev
+    position: absolute
+    top: 0
+    z-index: 3
+    min-width: unset
+    transform: translateY(-49px)
+  .c-slider__next
+    right: 3px
+  .c-slider__prev
+    left: 3px
+  &--swiper
+    .c-slider__inner
+      overflow-x: auto 
+      -webkit-overflow-scrolling: touch
+      +scrollbar-style
+      white-space: nowrap
+      padding-bottom: 20px
+      margin-bottom: -20px
+    // .c-slider__title
+    //   text-align: left
+  &--main
+    padding-top: 40px
+    .c-slider__inner
+      visibility: hidden
+      &.slick-initialized
+        visibility: visible 
+    .c-slider__btn
+      margin-top: 15px
+  &--swiper
+    .c-slider__inner
+      &.slick-initialized
+        visibility: visible
+        overflow: visible
+    
++MQ(993px)
+  .c-slider
+    .c-slider__prev,
+    .c-slider__next
+      top: 50%
+      margin-top: -40px
+    .c-slider__row
+      font-size: 0
+    .c-slider__col
+      display: inline-block
+      vertical-align: bottom
+      width: 70%
+      padding-right: 50px
+    .c-slider__title
+      text-align: left
+    .c-slider__more
+      text-align: right
+      width: 30%
+      padding-right: 0
+
++MQ(1025px)
+  .c-slider
+    .c-slider__inner
+      margin-left: -3px
+      margin-right: -3px
+    .c-slider__more
+      margin-bottom: 5px
+      padding-right: 2px
+    .c-slider__row
+      margin-bottom: 17px
+    .c-slider__title
+      text-align: left
+
++MQ(1280px)
+  .c-slider
+    .c-slider__inner
+      max-width: 81.25rem
+      margin-left: auto
+      margin-right: auto 
+    &--main
+      padding-top: 32px
+      padding-bottom: 10px
+    &--also
+      .c-slider__prev,
+      .c-slider__next
+        top: 293px
+      .c-slider__next
+        right: -5px
+      .c-slider__prev
+        left: -5px
+
++MQ(1440px)
+  .c-slider
+    .c-slider__next
+      right: -30px
+    .c-slider__prev
+      left: -30px
+    &--also
+      .c-slider__next
+        right: -5px
+      .c-slider__prev
+        left: -5px

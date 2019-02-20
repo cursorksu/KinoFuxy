@@ -1,0 +1,96 @@
+// colors
+$blue-hover: #0fa8e4;
+$violet: #9e33b5;
+
+
+$dark: #000;
+$orange: #ff8b00;
+$blue: #0083da;
+$green: #47bd62;
+
+$yellow: #ffc900;
+$yellow-light: #fdd774;
+$green-light: #e9f2df;
+
+
+$red: #f43858;
+$red-light: #ff9999;
+
+
+// gradient
+.gradient-1 {
+  background: rgba(254,0,195,1);
+  background: -moz-linear-gradient(left, rgba(254,0,195,1) 0%, rgba(169,0,254,1) 100%);
+  background: -webkit-gradient(left top, right top, color-stop(0%, rgba(254,0,195,1)), color-stop(100%, rgba(169,0,254,1)));
+  background: -webkit-linear-gradient(left, rgba(254,0,195,1) 0%, rgba(169,0,254,1) 100%);
+  background: -o-linear-gradient(left, rgba(254,0,195,1) 0%, rgba(169,0,254,1) 100%);
+  background: -ms-linear-gradient(left, rgba(254,0,195,1) 0%, rgba(169,0,254,1) 100%);
+  background: linear-gradient(to right, rgba(254,0,195,1) 0%, rgba(169,0,254,1) 100%);
+  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#fe00c3', endColorstr='#a900fe', GradientType=1 );
+}
+
+.gradient-2 {
+  background: rgba(255,0,191,1);
+  background: -moz-linear-gradient(left, rgba(255,0,191,1) 0%, rgba(170,0,255,1) 100%);
+  background: -webkit-gradient(left top, right top, color-stop(0%, rgba(255,0,191,1)), color-stop(100%, rgba(170,0,255,1)));
+  background: -webkit-linear-gradient(left, rgba(255,0,191,1) 0%, rgba(170,0,255,1) 100%);
+  background: -o-linear-gradient(left, rgba(255,0,191,1) 0%, rgba(170,0,255,1) 100%);
+  background: -ms-linear-gradient(left, rgba(255,0,191,1) 0%, rgba(170,0,255,1) 100%);
+  background: linear-gradient(to right, rgba(255,0,191,1) 0%, rgba(170,0,255,1) 100%);
+  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#ff00bf', endColorstr='#aa00ff', GradientType=1 );
+}
+
+
+//social color
+$odnoklassniki: #ed8109;
+$vk: #507398;
+$twitter: #77cbef;
+$instagram: #c13584;
+$fb: #5c77b8;
+$google: #55494d;
+$viber: #7e40bc;
+$telegram: #60a8de;
+
+/**/
+$facebook_color: hsla(222, 47%, 40%, 1);
+$twitter_color: hsla(198, 100%, 47%, 1);
+$google_plus_color: hsla(8, 74%, 53%, 1);
+$vk_color: #45668e;
+$youtube: #f61c0d;
+
+
+// fonts
+
+$default: 'Fira Sans', sans-serif;
+$roboto: 'Roboto', sans-serif;
+
+//icons
+$icon-help: "\e90d";
+$icon-promo-1: "\e91c";
+$icon-arrow-link-down: "\e919";
+$icon-arrow-link-left: "\e91a";
+$icon-arrow-link-up: "\e91b";
+$icon-play: "\e916";
+$icon-arrow-down: "\e917";
+$icon-arrow-up: "\e918";
+$icon-vk: "\e911";
+$icon-twitter: "\e912";
+$icon-telegram: "\e913";
+$icon-odnoklassniki: "\e914";
+$icon-facebook: "\e915";
+$icon-download: "\e90f";
+$icon-watch: "\e910";
+$icon-double-top: "\e90e";
+$icon-traler: "\e908";
+$icon-metacritic: "\e909";
+$icon-tomatoes: "\e90a";
+$icon-Imdb: "\e90b";
+$icon-kinopoisk: "\e90c";
+$icon-search: "\e907";
+$icon-arrow-link-right: "\e906";
+$icon-logo: "\e900";
+$icon-arrow-left: "\e901";
+$icon-arrow-right: "\e902";
+$icon-close: "\e903";
+$icon-down: "\e904";
+$icon-up: "\e905";

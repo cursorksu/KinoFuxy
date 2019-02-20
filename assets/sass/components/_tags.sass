@@ -1,0 +1,158 @@
+.c-tags
+  position: fixed
+  width: 100%
+  top: 60px
+  background-color: rgba($color-bg, .95)
+  z-index: 20
+  transition: top .3s
+  overflow: hidden
+
+
+  &:before,
+  &:after
+    content: ''
+    position: absolute
+    width: 94%
+    height: 1px
+    margin-right: 3%
+    margin-left: 3%
+    opacity: .7
+    +divider-gradient
+  &:before
+    top: 0
+    content: none
+  &:after
+    bottom: 0
+  &.scrolled
+    top: 60px
+  .c-tags__track
+    white-space: nowrap
+    overflow-x: auto
+    padding-top: 15px
+    padding-bottom: 35px
+    margin-bottom: -20px
+    -webkit-overflow-scrolling: touch
+    +scrollbar-style
+    &::-webkit-scrollbar
+      display: none
+  .c-tags__list
+    font-size: 0
+    display: flex
+    flex-direction: row
+  .c-tags__item
+    display: inline-block
+    padding-left: 17px
+    order: 1
+    transition: order .3s
+    pointer-events: none
+    + .c-tags__item
+      padding-left: 17px
+    &:last-child
+      padding-right: 17px
+    &.is-active
+      // order: 0
+  .c-tags__link
+    pointer-events: auto
+    // *
+    //   pointer-events: none
+  &--not-fixed
+    position: relative
+    top: initial
+  &--not-delimited
+    &:before,
+    &:after
+      content: none
+
+
+
++MQ(800px)
+  .c-tags
+    top: 120px
+    &:after
+      margin-right: 0
+      margin-left: 0
+      width: 100%
+    .scrolled &
+      top: 69px
+    .is-pin &
+      top: 0
+
++MQ(1280px)
+  .c-tags
+    transition: 0s
+    position: absolute
+    will-change: position, transform
+    top: 0
+    left: 0
+    right: 0
+    padding-bottom: 0
+    &:before
+      content: none
+    .scrolled &
+      top: initial
+    .is-pin &
+      position: fixed
+      top: 3px
+      left: 0
+      right: 0
+      transition: 0s
+      transform: translate3d(0, 67px, 0)
+      transition: transform .3s
+    .c-tags__track
+      padding-top: 7px
+      padding-bottom: 30px 
+      margin-left: auto
+      margin-right: auto
+    .c-tags__item
+      padding: 8.5px
+      &:first-child
+        padding-left: 17px
+      + .c-tags__item
+        padding-left: 8.5px
+      &:last-child
+        padding-right: 17px
+      &.is-active
+        order: 1
+    &--pt33
+      padding-top: 13px
+    &--not-fixed
+      position: relative
+      .c-tags__list
+        flex-wrap: wrap
+        align-items: center
+        justify-content: center
+
+
+      .c-tags__track
+        white-space: normal
+      .c-tags__item
+        &:first-child
+          padding-left: 8.5px
+
++MQ(1366px)
+  .c-tags
+    .c-tags__list
+      flex-wrap: wrap
+    .is-pin &
+      .c-tags__track
+        white-space: nowrap
+        max-width: unset
+        width: 100%
+        overflow: auto
+      .c-tags__item
+        &:first-child
+          padding-left: 17px
+      .c-tags__list
+        flex-wrap: nowrap
+    .c-tags__track
+      overflow: initial
+      white-space: normal
+      padding-left: $space
+      padding-right: $space
+      max-width: 81.25rem
+    .c-tags__list
+      margin-left: -8.5px
+      margin-right: -8.5px
+    .c-tags__item
+      &:first-child
+        padding-left: 8.5px

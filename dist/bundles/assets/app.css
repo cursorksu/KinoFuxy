@@ -2314,7 +2314,7 @@ body:not(.front) .mm-page .page-movie .page-top .box-right {
 }
 .c-tabs .c-preview .c-preview__title{
     display: flex;
-    height: 36px;
+    height: 70px;
     justify-content: center;
     align-items: center;
     text-align: center;

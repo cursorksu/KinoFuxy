@@ -2266,6 +2266,7 @@ body:not(.front) .mm-page .page-movie .page-top .box-right {
 }
 .c-tabs .c-tabs__wrapper{
     position: relative;
+    min-height: 210px;
 }
 .c-tabs .quality-filter ul {
     display: -webkit-box;
@@ -2312,10 +2313,7 @@ body:not(.front) .mm-page .page-movie .page-top .box-right {
     margin-bottom: 32px;
 }
 .c-tabs .c-preview .c-preview__title{
-    text-align: center;
-    padding: 0;
-    padding-top: 15px;
-    margin: 0;
+    text-align: left;
 }
 .c-tabs .c-slider__btn [class^="icon-"], .c-tabs .c-slider__btn [class*=" icon-"]{
     font-size: 11px;
@@ -2385,6 +2383,11 @@ body:not(.front) .mm-page .page-movie .page-top .box-right {
         -webkit-box-pack: left;
         -ms-flex-pack: left;
         justify-content: left;
+    }
+}
+@media only screen and (min-width: 767px){
+    .c-tabs .c-preview .c-preview__title {
+        font-size: 26px;
     }
 }
 @media only screen and (max-width: 767px){
